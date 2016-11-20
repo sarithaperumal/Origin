@@ -1,0 +1,7 @@
+--To check cross DB chaining status use the below query :
+
+SELECT [name] AS [Database], [is_db_chaining_on] FROM [sys].databases ORDER BY [name];
+
+--To enable cross DB chaining use the below query :
+
+EXEC sp_dboption [DatabaseName], 'db chaining', 'true'
